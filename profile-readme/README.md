@@ -11,6 +11,4 @@ CTO at ReFocus AI. Over fifteen years leading engineering and product, including
 ## Elsewhere
 
 - Writing: [abbasraza.com](https://abbasraza.com)
-- Community: [Shine Labs](https://shinelabs.io)
 
-*To use this file: create a public repository named `leanpreneur` on your account and save this content as its README.md. GitHub shows it at the top of your profile.*
