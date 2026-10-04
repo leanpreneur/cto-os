@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.4.0 (2026-10-04)
+
+Added
+- ADOPT foundations gate: seven capabilities from DORA's AI Capabilities Model, rated Present, Partial or Absent with evidence tests. A ceiling rule caps the overall level at 2, 3, 4 or 5 depending on which capabilities are Present. The mapping to levels is this repository's judgment and is Draft.
+- ADOPT context practice inside dimension D: a five-level scale, a minimum context list for a repository, and matching observables in O (named owner) and P (no secrets in context).
+- Eleventh interview question on what a new engineer or agent must read to change the system safely.
+- Foundation moves in the move guide, and a foundations table in the scoring sheet.
+
+Changed
+- Overall level is now the lower of the lowest dimension score and the foundations ceiling.
+- `adopt-assess` skill checks foundations before scoring and reports what binds the overall level.
+- One-page CEO output names the binding constraint.
+
 ## v0.3.0 (2026-10-03)
 
 Added

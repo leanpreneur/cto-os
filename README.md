@@ -18,8 +18,8 @@ CTO OS covers that job. Every artifact exists in two forms: a document you can r
 | --- | --- | --- |
 | [First 90 Days](playbooks/first-90-days.md) | Stage-aware plan: listening tour, baseline metrics, priorities, CEO alignment, first win | Playbook |
 | [cto-day-one](skills/cto-day-one/SKILL.md) | Interviews you about the company, then produces a tailored 30/60/90 plan | Agent skill |
-| [ADOPT Assessment](playbooks/adopt-assessment.md) | Scores your organization from 1 to 5 on AI-native engineering across five dimensions, with evidence and a move plan | Playbook |
-| [adopt-assess](skills/adopt-assess/SKILL.md) | Gathers evidence from your repos and documents, scores, and writes the one-page result for the CEO | Agent skill |
+| [ADOPT Assessment](playbooks/adopt-assessment.md) | Checks seven foundations from DORA, then scores your organization from 1 to 5 on AI-native engineering across five dimensions, with evidence and a move plan | Playbook |
+| [adopt-assess](skills/adopt-assess/SKILL.md) | Gathers evidence from your repos and documents, checks foundations, scores, and writes the one-page result for the CEO | Agent skill |
 | [CEO and CTO Partnership](playbooks/ceo-cto-partnership.md) | Six practices, a business translation table, bad-news and disagreement scripts, and a board preparation timeline | Playbook |
 | [CEO and CTO Operating Agreement](templates/ceo-cto-operating-agreement.md) | Outcomes, decision rights, rhythm, communication rules and reset triggers, written and signed | Template |
 | [ceo-alignment](skills/ceo-alignment/SKILL.md) | Interviews you and drafts the operating agreement, with the questions to settle and a 20-minute meeting plan | Agent skill |
@@ -42,7 +42,7 @@ Open Claude Code in any folder and run `/cto-day-one`, `/adopt-assess`, `/ceo-al
 
 ## ADOPT
 
-ADOPT is the author's framework for AI transformation maturity: **A**lign on outcomes, **D**esign an AI-native SDLC, **O**rchestrate human and AI roles, **P**ut guardrails in place, **T**ransform culture and skills. It is described in the essay [From Copilot to Autonomous Engineering](https://abbasraza.com/essays/from-copilot-to-autonomous-engineering/). The assessment in this repo extends the essay with a scoring rubric. The rubric is Draft.
+ADOPT is the author's framework for AI transformation maturity: **A**lign on outcomes, **D**esign an AI-native SDLC, **O**rchestrate human and AI roles, **P**ut guardrails in place, **T**ransform culture and skills. It is described in the essay [From Copilot to Autonomous Engineering](https://abbasraza.com/essays/from-copilot-to-autonomous-engineering/). The assessment in this repo extends the essay with a scoring rubric, a foundations gate built on the seven capabilities in [DORA's AI Capabilities Model](https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model), and an explicit context practice inside D. All three extensions are Draft.
 
 ## Status labels
 
