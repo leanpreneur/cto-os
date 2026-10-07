@@ -25,6 +25,8 @@ CTO OS covers that job. Every artifact exists in two forms: a document you can r
 | [ceo-alignment](skills/ceo-alignment/SKILL.md) | Interviews you and drafts the operating agreement, with the questions to settle and a 20-minute meeting plan | Agent skill |
 | [Board Update](templates/board-update.md) | Quarterly structure: headline, outcomes, investment, delivery, risk, people, AI, asks | Template |
 | [board-update](skills/board-update/SKILL.md) | Collects your metrics, applies status rules, drafts the update and the CEO pre-read | Agent skill |
+| [Engineering Baseline](playbooks/engineering-baseline.md) | Which delivery numbers git can and cannot show, how to read them, and how not to misuse them | Playbook |
+| [eng-audit](skills/eng-audit/SKILL.md) | Computes change size, branch lifetime, release cadence, reverts, contributor concentration and context files from your git history, and labels every number Measured, Proxy or Unknown | Agent skill |
 | [Decision Record](templates/decision-record.md) | One-page template for architecture and organization decisions | Template |
 | [Principles](PRINCIPLES.md) | The ten rules the rest of the repo follows | Reference |
 
@@ -32,13 +34,11 @@ CTO OS covers that job. Every artifact exists in two forms: a document you can r
 
 ```bash
 git clone https://github.com/leanpreneur/cto-os.git
-cp -r cto-os/skills/cto-day-one ~/.claude/skills/
-cp -r cto-os/skills/adopt-assess ~/.claude/skills/
-cp -r cto-os/skills/ceo-alignment ~/.claude/skills/
-cp -r cto-os/skills/board-update ~/.claude/skills/
+mkdir -p ~/.claude/skills
+cp -r cto-os/skills/* ~/.claude/skills/
 ```
 
-Open Claude Code in any folder and run `/cto-day-one`, `/adopt-assess`, `/ceo-alignment` or `/board-update`. Each skill bundles its own copy of the playbook it uses, so nothing else is needed.
+Open Claude Code in any folder and run `/cto-day-one`, `/adopt-assess`, `/ceo-alignment`, `/board-update` or `/eng-audit`. Each skill bundles its own copy of the playbook it uses, so nothing else is needed. `/eng-audit` also needs `python3` and `git`.
 
 ## ADOPT
 
@@ -54,7 +54,7 @@ Every artifact declares a status in its header.
 
 ## Next
 
-Hiring kit with leveling and scorecards, incident response and blameless postmortem, a repository audit skill that computes delivery metrics from your own history, a CTO scorecard with a 360 question set, and a situation router that points you to the right artifact.
+Hiring kit with leveling and scorecards, incident response and blameless postmortem, a CTO scorecard with a 360 question set, and a situation router that points you to the right artifact.
 
 ## Related work
 

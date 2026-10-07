@@ -71,6 +71,8 @@ Record answers in one shared table. Look for the same answer from unrelated peop
 | Open roles and time to fill | Hiring capacity |
 | Customer escalations by account | Where quality hurts revenue |
 
+Compute the git-derived rows with the [engineering baseline](engineering-baseline.md) and its `eng-audit` skill. They are Proxies for the first four rows, so keep the label.
+
 Record the value, the source and the date. Mark anything you cannot measure as **Unknown** and make measuring it a 60-day task.
 
 ### 4. Output: Diagnosis v1

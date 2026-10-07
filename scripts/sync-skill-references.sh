@@ -27,4 +27,6 @@ sync templates ceo-cto-operating-agreement.md ceo-alignment
 sync playbooks ceo-cto-partnership.md board-update
 sync templates board-update.md board-update
 
+sync playbooks engineering-baseline.md eng-audit
+
 echo "Skill references synced."

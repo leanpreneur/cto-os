@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.5.0 (2026-10-06)
+
+Added
+- Engineering Baseline playbook (`playbooks/engineering-baseline.md`): which delivery numbers git can and cannot show, a Measured, Proxy or Unknown label for every number, a reading table of questions to ask, and rules against misuse.
+- `eng-audit` agent skill with a bundled script (`skills/eng-audit/scripts/audit.py`, Python standard library only). It computes change size, branch lifetime, release cadence, reverts, contributor concentration, AI traceability, documentation freshness and context files from git history. It can add pull request cycle time and review time from the GitHub command line tool. It reports baseline rows for the First 90 Days table and evidence for the ADOPT assessment.
+
+Changed
+- First 90 Days playbook points to the engineering baseline for the git-derived metrics.
+- README install snippet copies all skills in one command.
+
+Tested
+- Against synthetic repositories with known answers, and against two public repositories, with counts checked against raw git. Excludes the commits at the edge of a shallow clone, which git shows as adding every file.
+
 ## v0.4.0 (2026-10-04)
 
 Added
