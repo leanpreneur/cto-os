@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.7.0 (2026-11-22)
+
+Added
+- `ask-cto-os` agent skill: the front door. You describe a situation and it names the skill or document to start with, what you will get and what to run next. It reads a routing table (`skills/ask-cto-os/references/routes.json`) with 14 situations, and says plainly what CTO OS does not cover yet.
+- Situations page (`docs/situations.md`), generated from the routing table, so the same routes can be read without running a skill.
+- `check_routes.py` (Python standard library only) with three commands. `check` fails if any skill, playbook or template cannot be reached from a situation, or if a route points to something that does not exist. `render` writes the situations page. `match` ranks situations by keyword signals, as candidates for the skill to judge.
+
+Changed
+- README: the router is the first row of the artifact table, the run line starts with `/ask-cto-os`, the Next list drops the router, and Maintaining says to add every new artifact to the routing table.
+- `scripts/sync-skill-references.sh` regenerates `docs/situations.md`.
+
+Tested
+- 15 unit tests (`python3 -I test_check_routes.py` in `skills/ask-cto-os/scripts`), including a check that the real repository is fully reachable and a regression phrase for each of the 14 situations. The keyword matcher is a convenience and counts words. The skill itself routes on meaning.
+
 ## v0.6.0 (2026-11-22)
 
 Added

@@ -14,8 +14,11 @@ CTO OS covers that job. Every artifact exists in two forms: a document you can r
 
 ## Start here
 
+Not sure which artifact you need? Run `/ask-cto-os` and describe what is happening, or look up your situation in the [situations table](docs/situations.md).
+
 | Artifact | What you get | Form |
 | --- | --- | --- |
+| [ask-cto-os](skills/ask-cto-os/SKILL.md) | The front door. Describe your situation and it names the skill or document to start with, what you will get and what to run next. Also available as a [table of situations](docs/situations.md) | Agent skill |
 | [First 90 Days](playbooks/first-90-days.md) | Stage-aware plan: listening tour, baseline metrics, priorities, CEO alignment, first win | Playbook |
 | [cto-day-one](skills/cto-day-one/SKILL.md) | Interviews you about the company, then produces a tailored 30/60/90 plan | Agent skill |
 | [ADOPT Assessment](playbooks/adopt-assessment.md) | Checks seven foundations from DORA, then scores your organization from 1 to 5 on AI-native engineering across five dimensions, with evidence and a move plan | Playbook |
@@ -45,7 +48,7 @@ mkdir -p ~/.claude/skills
 cp -r cto-os/skills/* ~/.claude/skills/
 ```
 
-Open Claude Code in any folder and run `/cto-day-one`, `/adopt-assess`, `/ceo-alignment`, `/board-update`, `/eng-audit`, `/hiring-plan` or `/leveling-ladder`. Each skill bundles its own copy of the playbook it uses, so nothing else is needed. `/eng-audit` needs `python3` and `git`. `/hiring-plan` and `/leveling-ladder` run small Python scripts and need `python3`.
+Open Claude Code in any folder and run `/ask-cto-os` to be pointed to the right one, or run `/cto-day-one`, `/adopt-assess`, `/ceo-alignment`, `/board-update`, `/eng-audit`, `/hiring-plan` or `/leveling-ladder` directly. Each skill bundles its own copy of the playbook it uses, so nothing else is needed. `/eng-audit` needs `python3` and `git`. `/hiring-plan`, `/leveling-ladder` and the optional keyword matcher in `/ask-cto-os` run small Python scripts and need `python3`.
 
 ## ADOPT
 
@@ -61,7 +64,7 @@ Every artifact declares a status in its header.
 
 ## Next
 
-Incident response and blameless postmortem, a CTO scorecard with a 360 question set, and a situation router that points you to the right artifact.
+Incident response and blameless postmortem, and a CTO scorecard with a 360 question set. The [situations table](docs/situations.md) lists what is not covered yet.
 
 ## Related work
 
@@ -79,7 +82,9 @@ CTO OS differs in three ways: its skills produce finished artifacts instead of a
 
 ## Maintaining
 
-Playbooks are the source of truth. After editing one, run `scripts/sync-skill-references.sh` to refresh the copy bundled with its skill.
+Playbooks and templates are the source of truth. After editing one, run `scripts/sync-skill-references.sh` to refresh the copy bundled with its skill. The script also regenerates `docs/situations.md` from the routing table.
+
+When you add a playbook, template or skill, add it to `skills/ask-cto-os/references/routes.json`, then run `python3 skills/ask-cto-os/scripts/check_routes.py check`. It fails if any artifact cannot be reached from a situation.
 
 ## License
 

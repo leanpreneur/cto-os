@@ -41,4 +41,7 @@ sync playbooks leveling.md leveling-ladder
 sync templates leveling-ladder.md leveling-ladder
 sync templates promotion-packet.md leveling-ladder
 
+# The routing table is the source for the situations page.
+python3 "$root/skills/ask-cto-os/scripts/check_routes.py" render > "$root/docs/situations.md"
+
 echo "Skill references synced."
