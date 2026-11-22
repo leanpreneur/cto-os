@@ -1,0 +1,22 @@
+{
+  "role": "Senior Backend Engineer",
+  "level": "E3",
+  "decision_owner": "hiring-manager",
+  "debrief": true,
+  "ai_policy": "allowed",
+  "competencies": [
+    {"id": "judgment", "name": "Technical judgment", "must": true},
+    {"id": "design", "name": "System design", "must": true},
+    {"id": "delivery", "name": "Delivery and ownership", "must": true},
+    {"id": "collab", "name": "Collaboration and communication", "must": false},
+    {"id": "ai", "name": "Engineering with AI", "must": true}
+  ],
+  "interviews": [
+    {"id": "screen", "name": "Screen", "minutes": 30, "interviewer": "hiring-manager", "type": "screen", "competencies": []},
+    {"id": "sample", "name": "Work sample", "minutes": 90, "interviewer": "engineer-a", "type": "work_sample", "competencies": ["judgment", "ai", "delivery"]},
+    {"id": "design", "name": "System design", "minutes": 60, "interviewer": "engineer-b", "type": "design", "competencies": ["design", "judgment"]},
+    {"id": "collab", "name": "Collaboration and ownership", "minutes": 45, "interviewer": "engineer-c", "type": "behavioral", "competencies": ["collab", "delivery"]},
+    {"id": "manager", "name": "Hiring manager deep dive", "minutes": 45, "interviewer": "hiring-manager", "type": "behavioral", "competencies": ["delivery", "ai", "collab"]},
+    {"id": "cross", "name": "Cross-functional", "minutes": 30, "interviewer": "product-partner", "type": "behavioral", "competencies": ["collab", "design"]}
+  ]
+}

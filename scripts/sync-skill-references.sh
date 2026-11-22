@@ -29,4 +29,16 @@ sync templates board-update.md board-update
 
 sync playbooks engineering-baseline.md eng-audit
 
+sync playbooks hiring.md hiring-plan
+sync templates role-scorecard.md hiring-plan
+sync templates interview-loop-plan.md hiring-plan
+sync templates interview-question-bank.md hiring-plan
+sync templates interview-feedback-form.md hiring-plan
+sync templates hiring-debrief.md hiring-plan
+sync templates leveling-ladder.md hiring-plan
+
+sync playbooks leveling.md leveling-ladder
+sync templates leveling-ladder.md leveling-ladder
+sync templates promotion-packet.md leveling-ladder
+
 echo "Skill references synced."

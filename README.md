@@ -27,6 +27,13 @@ CTO OS covers that job. Every artifact exists in two forms: a document you can r
 | [board-update](skills/board-update/SKILL.md) | Collects your metrics, applies status rules, drafts the update and the CEO pre-read | Agent skill |
 | [Engineering Baseline](playbooks/engineering-baseline.md) | Which delivery numbers git can and cannot show, how to read them, and how not to misuse them | Playbook |
 | [eng-audit](skills/eng-audit/SKILL.md) | Computes change size, branch lifetime, release cadence, reverts, contributor concentration and context files from your git history, and labels every number Measured, Proxy or Unknown | Agent skill |
+| [Hiring](playbooks/hiring.md) | Role scorecard, loop design, structured questions with rubrics, work samples that work when candidates use AI, a 30-minute debrief, offer, legal checks and the measures to track | Playbook |
+| [Hiring templates](templates/role-scorecard.md) | [Role scorecard](templates/role-scorecard.md), [loop plan](templates/interview-loop-plan.md), [question bank](templates/interview-question-bank.md), [feedback form](templates/interview-feedback-form.md), [debrief](templates/hiring-debrief.md) | Templates |
+| [hiring-plan](skills/hiring-plan/SKILL.md) | Interviews you about the role, writes the scorecard and loop, checks that every competency has two independent signals, and after the interviews summarizes feedback and flags missing evidence and score gaps | Agent skill |
+| [Leveling](playbooks/leveling.md) | One written ladder, calibration twice a year, a promotion process, pay band structure and the measures that show whether the ladder works | Playbook |
+| [Leveling Ladder](templates/leveling-ladder.md) | Starter ladder for engineers and managers, E1 to E6 and M1 to M4, on six axes including engineering with AI | Template |
+| [Promotion Packet](templates/promotion-packet.md) | Dated evidence by axis, peer input, gaps and the decision | Template |
+| [leveling-ladder](skills/leveling-ladder/SKILL.md) | Builds a ladder for your company, measures levels, spans, layers and time in level from a roster file, and levels a person from evidence | Agent skill |
 | [Decision Record](templates/decision-record.md) | One-page template for architecture and organization decisions | Template |
 | [Principles](PRINCIPLES.md) | The ten rules the rest of the repo follows | Reference |
 
@@ -38,7 +45,7 @@ mkdir -p ~/.claude/skills
 cp -r cto-os/skills/* ~/.claude/skills/
 ```
 
-Open Claude Code in any folder and run `/cto-day-one`, `/adopt-assess`, `/ceo-alignment`, `/board-update` or `/eng-audit`. Each skill bundles its own copy of the playbook it uses, so nothing else is needed. `/eng-audit` also needs `python3` and `git`.
+Open Claude Code in any folder and run `/cto-day-one`, `/adopt-assess`, `/ceo-alignment`, `/board-update`, `/eng-audit`, `/hiring-plan` or `/leveling-ladder`. Each skill bundles its own copy of the playbook it uses, so nothing else is needed. `/eng-audit` needs `python3` and `git`. `/hiring-plan` and `/leveling-ladder` run small Python scripts and need `python3`.
 
 ## ADOPT
 
@@ -54,7 +61,7 @@ Every artifact declares a status in its header.
 
 ## Next
 
-Hiring kit with leveling and scorecards, incident response and blameless postmortem, a CTO scorecard with a 360 question set, and a situation router that points you to the right artifact.
+Incident response and blameless postmortem, a CTO scorecard with a 360 question set, and a situation router that points you to the right artifact.
 
 ## Related work
 

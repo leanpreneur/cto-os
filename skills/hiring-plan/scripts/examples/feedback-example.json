@@ -1,0 +1,29 @@
+{
+  "candidate": "C-104",
+  "role": "Senior Backend Engineer",
+  "level": "E3",
+  "feedback": [
+    {"interviewer": "engineer-a", "interview": "sample", "submitted_before_debrief": true, "recommendation": "hire",
+     "scores": {"judgment": 3, "ai": 4, "delivery": 3},
+     "evidence": {"judgment": "Chose a queue over polling and named duplicate delivery as the cost",
+                  "ai": "Gave the agent the spec and failing tests, caught a swallowed error in its output",
+                  "delivery": "Split the feature into three small pull requests unprompted"}},
+    {"interviewer": "engineer-b", "interview": "design", "submitted_before_debrief": true, "recommendation": "hire",
+     "scores": {"design": 2, "judgment": 3},
+     "evidence": {"design": "Drew the happy path only and skipped failure modes",
+                  "judgment": "Chose the simple queue and named the cost"}},
+    {"interviewer": "product-partner", "interview": "cross", "submitted_before_debrief": true, "recommendation": "no_hire",
+     "scores": {"design": 4, "collab": 3},
+     "evidence": {"design": "Found the duplicate delivery flaw and proposed an idempotency key",
+                  "collab": "Explained the trade-off so I could choose"}},
+    {"interviewer": "hiring-manager", "interview": "manager", "submitted_before_debrief": false, "recommendation": "hire",
+     "scores": {"ai": 3, "delivery": 3, "collab": 3},
+     "evidence": {"ai": "Seemed capable",
+                  "delivery": "Shipped two projects and told partners early",
+                  "collab": "Takes feedback and adjusts quickly"}},
+    {"interviewer": "engineer-c", "interview": "collab", "submitted_before_debrief": true, "recommendation": "hire",
+     "scores": {"collab": 3, "delivery": 3},
+     "evidence": {"collab": "Disagreed with a peer then committed to the decision",
+                  "delivery": "Cut scope and agreed the cut with the product owner"}}
+  ]
+}
