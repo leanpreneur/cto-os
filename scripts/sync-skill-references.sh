@@ -41,6 +41,12 @@ sync playbooks leveling.md leveling-ladder
 sync templates leveling-ladder.md leveling-ladder
 sync templates promotion-packet.md leveling-ladder
 
+sync playbooks incident-response.md incident-response
+sync templates incident-severity-guide.md incident-response
+sync templates incident-status-update.md incident-response
+sync templates incident-log.md incident-response
+sync templates postmortem.md incident-response
+
 # The routing table is the source for the situations page.
 python3 "$root/skills/ask-cto-os/scripts/check_routes.py" render > "$root/docs/situations.md"
 

@@ -20,6 +20,9 @@ Synthetic examples, each marked as script output or written by hand:
 - [A debrief summary that flags missing evidence and a score gap](examples/hiring/debrief-summary.md)
 - [An org shape report for a 29-person organization](examples/leveling/org-shape-report.md)
 - [A promotion packet that ends in "not yet"](examples/leveling/promotion-packet-not-yet.md)
+- [A postmortem that fails the check, and the fix](examples/incidents/postmortem-before-after.md)
+- [An incident summary for eight incidents](examples/incidents/incident-summary.md)
+- [Updates during an incident](examples/incidents/status-updates.md)
 - [Router answers, including one for a topic CTO OS does not cover](examples/router/sample-answers.md)
 - [All examples](examples/README.md)
 
@@ -48,6 +51,9 @@ Not sure which artifact you need? Run `/ask-cto-os` and describe what is happeni
 | [Leveling Ladder](templates/leveling-ladder.md) | Starter ladder for engineers and managers, E1 to E6 and M1 to M4, on six axes including engineering with AI | Template |
 | [Promotion Packet](templates/promotion-packet.md) | Dated evidence by axis, peer input, gaps and the decision | Template |
 | [leveling-ladder](skills/leveling-ladder/SKILL.md) | Builds a ladder for your company, measures levels, spans, layers and time in level from a roster file, and levels a person from evidence | Agent skill |
+| [Incident Response](playbooks/incident-response.md) | Severity scale, four incident roles, the first 15 minutes, update cadence, a blameless postmortem, action item follow-through and the measures to track | Playbook |
+| [Incident templates](templates/incident-severity-guide.md) | [Severity guide](templates/incident-severity-guide.md), [status update](templates/incident-status-update.md), [incident log](templates/incident-log.md), [postmortem](templates/postmortem.md) | Templates |
+| [incident-response](skills/incident-response/SKILL.md) | Builds your incident process, helps run the first 15 minutes and the updates, drafts a postmortem from your log and checks it for missing owners, dates and times, and summarizes incidents from a file | Agent skill |
 | [Decision Record](templates/decision-record.md) | One-page template for architecture and organization decisions | Template |
 | [Principles](PRINCIPLES.md) | The ten rules the rest of the repo follows | Reference |
 
@@ -59,7 +65,7 @@ mkdir -p ~/.claude/skills
 cp -r cto-os/skills/* ~/.claude/skills/
 ```
 
-Open Claude Code in any folder and run `/ask-cto-os` to be pointed to the right one, or run `/cto-day-one`, `/adopt-assess`, `/ceo-alignment`, `/board-update`, `/eng-audit`, `/hiring-plan` or `/leveling-ladder` directly. Each skill bundles its own copy of the playbook it uses, so nothing else is needed. `/eng-audit` needs `python3` and `git`. `/hiring-plan`, `/leveling-ladder` and the optional keyword matcher in `/ask-cto-os` run small Python scripts and need `python3`.
+Open Claude Code in any folder and run `/ask-cto-os` to be pointed to the right one, or run `/cto-day-one`, `/adopt-assess`, `/ceo-alignment`, `/board-update`, `/eng-audit`, `/hiring-plan`, `/leveling-ladder` or `/incident-response` directly. Each skill bundles its own copy of the playbook it uses, so nothing else is needed. `/eng-audit` needs `python3` and `git`. `/hiring-plan`, `/leveling-ladder`, `/incident-response` and the optional keyword matcher in `/ask-cto-os` run small Python scripts and need `python3`.
 
 ## ADOPT
 
@@ -77,7 +83,7 @@ Today every artifact is Early. As artifacts are applied in real engagements, the
 
 ## Next
 
-Incident response and blameless postmortem, and a CTO scorecard with a 360 question set. The [situations table](docs/situations.md) lists what is not covered yet.
+A CTO scorecard with a 360 question set. The [situations table](docs/situations.md) lists what is not covered yet.
 
 ## Related work
 

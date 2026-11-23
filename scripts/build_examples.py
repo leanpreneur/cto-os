@@ -24,12 +24,17 @@ import sys
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 HP = "skills/hiring-plan/scripts"
 LL = "skills/leveling-ladder/scripts"
+IR = "skills/incident-response/scripts"
 
 OUTPUTS = {
     "loop-draft": [f"{HP}/loop_check.py", "coverage", "--plan", f"{HP}/examples/loop-draft.json"],
     "loop-fixed": [f"{HP}/loop_check.py", "coverage", "--plan", f"{HP}/examples/loop-example.json"],
     "debrief": [f"{HP}/loop_check.py", "debrief", "--feedback", f"{HP}/examples/feedback-example.json",
                 "--plan", f"{HP}/examples/loop-example.json"],
+    "postmortem-draft": [f"{IR}/incident_check.py", "postmortem", "--file", f"{IR}/examples/postmortem-draft.md"],
+    "postmortem-fixed": [f"{IR}/incident_check.py", "postmortem", "--file", f"{IR}/examples/postmortem-example.md"],
+    "incident-summary": [f"{IR}/incident_check.py", "summary", "--incidents", f"{IR}/examples/incidents-example.csv",
+                         "--actions", f"{IR}/examples/actions-example.csv", "--as-of", "2026-11-22"],
     "org-shape": [f"{LL}/org_shape.py", "--roster", f"{LL}/examples/roster-example.csv",
                   "--as-of", "2026-11-22", "--show-ids"],
 }

@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.8.0 (2026-11-23)
+
+Added
+- Incident response playbook (`playbooks/incident-response.md`): a severity scale written from customer impact, four incident roles, declaring early, a first-15-minutes routine, a communication clock for responders, support, customers and the CEO, resolving and closing, postmortem triggers, a blameless postmortem, action item follow-through, and measures with Measured and Proxy labels.
+- Incident templates: severity guide, status update (customer, internal and CEO), incident log and postmortem.
+- `incident-response` agent skill with four modes. Prepare builds the process. Run helps in the first 15 minutes of a live incident, drafts updates on a clock and keeps the log. Postmortem drafts from your log and checks the result. Measure summarizes incidents from a file.
+- `incident_check.py` (Python standard library only), bundled with the skill. `postmortem` checks a postmortem written from the template: missing sections, times that go backwards, action items with no owner or due date, one contributing factor, impact with no number, a customer-found incident with no detect item, and a list of blame phrases. It also measures time to detect, mitigate and resolve. `summary` reads a CSV of incidents and reports counts by severity, medians and longest times, who found each incident, repeat contributing factors, postmortems published within 7 days and overdue action items.
+- Examples in `examples/incidents/`: a postmortem that fails the check and its fix, an incident summary, and a set of updates during an invented incident. The script output blocks are refreshed and checked by `scripts/build_examples.py`.
+- Three router situations: an incident happening now, a missing or chaotic incident process, and a postmortem or incident measures.
+
+Changed
+- The router's example for a topic CTO OS does not cover is now SOC 2, because incident response is covered. Security and compliance programs are still listed as not covered.
+- The first 90 days and engineering baseline playbooks link to the incident response playbook.
+- README: three rows in the artifact table, the example links, the run line, and the Next list.
+- `scripts/sync-skill-references.sh` bundles the playbook and templates with the new skill.
+
+Tested
+- 35 unit tests (`python3 -I test_incident_check.py` in `skills/incident-response/scripts`), including the fixtures for the failing draft and the passing example. 15 router tests, with a regression phrase for each of the 17 situations.
+- Early. The severity levels, update cadences, the 15-minute routine, the eight-item and 90-day limits and the 7-day publishing target are this repository's judgment and have not been validated in a real engagement.
+
 ## v0.7.1 (2026-11-22)
 
 Added

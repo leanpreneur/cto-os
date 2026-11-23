@@ -16,12 +16,14 @@ Run `/ask-cto-os` and describe what is happening, or find your situation in the 
 | Someone is up for promotion, or it is calibration time | `/leveling-ladder` | none | [leveling](../playbooks/leveling.md), [promotion-packet](../templates/promotion-packet.md) |
 | I need to decide what level a candidate or a new hire should be | `/leveling-ladder` | `/hiring-plan` | [leveling](../playbooks/leveling.md), [hiring](../playbooks/hiring.md) |
 | I want to know if my organization is shaped right: spans, layers, managers, time in level | `/leveling-ladder` | `/eng-audit` | [leveling](../playbooks/leveling.md) |
+| There is a production incident or outage happening now | `/incident-response` | none | [incident-response](../playbooks/incident-response.md), [incident-status-update](../templates/incident-status-update.md) |
+| We have no incident process, or incidents are chaotic and the same ones keep coming back | `/incident-response` | `/board-update` | [incident-response](../playbooks/incident-response.md), [incident-severity-guide](../templates/incident-severity-guide.md), [incident-log](../templates/incident-log.md) |
+| I need to write or review a postmortem, or measure our incidents | `/incident-response` | `/board-update` | [incident-response](../playbooks/incident-response.md), [postmortem](../templates/postmortem.md) |
 | I need to record an architecture, vendor or organization decision, or the team keeps relitigating one | Read the documents | none | [decision-record](../templates/decision-record.md) |
 | I am not sure where to start | Read the documents | `/cto-day-one` | [PRINCIPLES](../PRINCIPLES.md) |
 
 ## Not covered yet
 
-- Incident response and blameless postmortems. No close match today.
 - A scorecard or 360 review of the CTO. No close match today.
 - Architecture reviews and cloud cost reviews. Closest today: [decision-record](../templates/decision-record.md).
 - Security and compliance programs. No close match today.
