@@ -1,6 +1,6 @@
 ---
 name: board-update
-status: draft
+status: early
 use: quarterly board update from the CTO. One page of headline plus appendix.
 ---
 

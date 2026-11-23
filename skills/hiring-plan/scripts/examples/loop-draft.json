@@ -1,0 +1,19 @@
+{
+  "role": "Senior Backend Engineer",
+  "level": "E3",
+  "decision_owner": "hiring-manager",
+  "debrief": false,
+  "competencies": [
+    {"id": "judgment", "name": "Technical judgment", "must": true},
+    {"id": "design", "name": "System design", "must": true},
+    {"id": "delivery", "name": "Delivery and ownership", "must": true},
+    {"id": "collab", "name": "Collaboration and communication", "must": false},
+    {"id": "ai", "name": "Engineering with AI", "must": true}
+  ],
+  "interviews": [
+    {"id": "screen", "name": "Screen", "minutes": 30, "interviewer": "hiring-manager", "type": "screen", "competencies": []},
+    {"id": "tech", "name": "Technical interview", "minutes": 120, "interviewer": "engineer-a", "type": "design", "competencies": ["judgment", "design", "delivery", "ai"]},
+    {"id": "sample", "name": "Work sample", "minutes": 90, "interviewer": "engineer-a", "type": "work_sample", "competencies": ["ai", "judgment"]},
+    {"id": "manager", "name": "Hiring manager deep dive", "minutes": 45, "interviewer": "hiring-manager", "type": "behavioral", "competencies": ["delivery", "collab"]}
+  ]
+}

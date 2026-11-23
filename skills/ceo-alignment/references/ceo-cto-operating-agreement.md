@@ -1,6 +1,6 @@
 ---
 name: ceo-cto-operating-agreement
-status: draft
+status: early
 use: first two weeks of a CTO engagement, then review every quarter
 ---
 

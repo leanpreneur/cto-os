@@ -1,6 +1,6 @@
 ---
 name: adopt-assessment
-status: draft
+status: early
 author: Abbas Raza
 source: https://abbasraza.com/essays/from-copilot-to-autonomous-engineering/
 audience: CTO, VP Engineering or engineering leader rolling out AI-assisted development
@@ -10,7 +10,7 @@ audience: CTO, VP Engineering or engineering leader rolling out AI-assisted deve
 
 ADOPT is a framework for moving an engineering organization from AI tools to an AI-native way of building software. It was introduced in the essay [From Copilot to Autonomous Engineering](https://abbasraza.com/essays/from-copilot-to-autonomous-engineering/). This playbook turns the framework into an assessment you can run in two hours with evidence.
 
-> **What comes from the essay and what is added here.** The five ADOPT dimensions, the five maturity levels, the three operating modes and the six failure modes come from the essay. The dimension-by-level rubric, the constraint rule, the move guide, the foundations gate and the context practice are extensions built for this repository. The seven foundation capabilities are named by DORA (see [Sources](#sources)). How they map to ADOPT levels is this repository's judgment. All extensions are Draft until applied in a real engagement.
+> **What comes from the essay and what is added here.** The five ADOPT dimensions, the five maturity levels, the three operating modes and the six failure modes come from the essay. The dimension-by-level rubric, the constraint rule, the move guide, the foundations gate and the context practice are extensions built for this repository. The seven foundation capabilities are named by DORA (see [Sources](#sources)). How they map to ADOPT levels is this repository's judgment. All extensions are Early until applied in a real engagement.
 
 ## The premise
 

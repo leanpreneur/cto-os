@@ -1,6 +1,6 @@
 ---
 name: decision-record
-status: draft
+status: early
 use: architecture, technology, vendor and organization decisions
 ---
 

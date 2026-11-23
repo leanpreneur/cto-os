@@ -8,7 +8,7 @@
       "start_with": "cto-day-one",
       "then": ["eng-audit", "ceo-alignment"],
       "read": ["playbooks/first-90-days.md"],
-      "ask_first": "What is the company stage and when do you start?",
+      "ask_first": "What is the company stage, and how many engineers are there?",
       "you_get": "A tailored 30, 60 and 90 day plan, a listening tour agenda and a baseline metrics table."
     },
     {

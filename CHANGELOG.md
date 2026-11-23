@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.7.1 (2026-11-22)
+
+Added
+- `examples/`: synthetic examples of what the skills produce. A filled role scorecard, an interview loop that fails the coverage check and the fixed version, a debrief summary with a missing-evidence flag and a score gap, an org shape report, a promotion packet that ends in "not yet", and three router answers including one for a topic CTO OS does not cover. Each example says whether it is script output or written by hand. No real company, candidate or employee appears.
+- `scripts/build_examples.py`: refreshes the script output shown in the examples, and with `--check` fails if any of it no longer matches what the scripts print.
+- `loop-draft.json` fixture and a test that it fails in the documented way (3 failures, 4 warnings).
+
+Changed
+- Status labels renamed: Draft is now Early, and Used is now Field-tested. Proven is unchanged. The meanings are the same. Early means written and not yet applied in a real engagement. Field-tested means applied in a real engagement. Every caveat about thresholds, rubrics and readings that have not been validated stays. Earlier entries below use the new names. No artifact is Field-tested yet.
+- README: a "See what it produces" section above the artifact table, and a note that every artifact is Early today.
+- Router asks "What is the company stage, and how many engineers are there?" for a new role.
+- `scripts/sync-skill-references.sh` also refreshes the examples.
+
 ## v0.7.0 (2026-11-22)
 
 Added
@@ -31,7 +44,7 @@ Changed
 
 Tested
 - Both scripts have unit tests whose expected values were worked out by hand from small synthetic fixtures (12 tests for `loop_check.py`, 13 for `org_shape.py`). Run `python3 -I test_loop_check.py` and `python3 -I test_org_shape.py` in each script folder.
-- The 1 to 4 scale, the five-hour candidate cap, the three-competency limit per interview, the span and time-in-level thresholds and the ladder's level bands are this repository's judgment. They are Draft and not yet validated in real engagements.
+- The 1 to 4 scale, the five-hour candidate cap, the three-competency limit per interview, the span and time-in-level thresholds and the ladder's level bands are this repository's judgment. They are Early and not yet validated in real engagements.
 
 ## v0.5.0 (2026-10-06)
 
@@ -49,7 +62,7 @@ Tested
 ## v0.4.0 (2026-10-04)
 
 Added
-- ADOPT foundations gate: seven capabilities from DORA's AI Capabilities Model, rated Present, Partial or Absent with evidence tests. A ceiling rule caps the overall level at 2, 3, 4 or 5 depending on which capabilities are Present. The mapping to levels is this repository's judgment and is Draft.
+- ADOPT foundations gate: seven capabilities from DORA's AI Capabilities Model, rated Present, Partial or Absent with evidence tests. A ceiling rule caps the overall level at 2, 3, 4 or 5 depending on which capabilities are Present. The mapping to levels is this repository's judgment and is Early.
 - ADOPT context practice inside dimension D: a five-level scale, a minimum context list for a repository, and matching observables in O (named owner) and P (no secrets in context).
 - Eleventh interview question on what a new engineer or agent must read to change the system safely.
 - Foundation moves in the move guide, and a foundations table in the scoring sheet.

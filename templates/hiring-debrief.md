@@ -1,6 +1,6 @@
 ---
 name: hiring-debrief
-status: draft
+status: early
 use: one per candidate, run within two working days of the last interview, 30 minutes
 ---
 

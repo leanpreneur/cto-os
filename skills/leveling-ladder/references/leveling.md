@@ -1,6 +1,6 @@
 ---
 name: leveling
-status: draft
+status: early
 audience: CTO or VP Engineering who needs a career ladder, or who inherited levels that nobody can explain
 ---
 
@@ -30,7 +30,7 @@ Fewer levels are easier to apply. Add a level only when you can describe how it 
 | 15 to 60 | E1 to E5 and M1 to M3 | Adds Junior Engineer, Senior Staff Engineer, Senior Engineering Manager, Director |
 | Over 60 | E1 to E6 and M1 to M4 | Adds Principal Engineer, VP Engineering |
 
-These bands are this repo's judgment and are Draft.
+These bands are this repo's judgment and are Early.
 
 ## Step 2: Define the axes
 
@@ -126,7 +126,7 @@ Level the candidate from [loop](https://github.com/leanpreneur/cto-os/blob/main/
 | Hired in versus promoted, by level | A level you can only fill from outside, or only from inside |
 | Span of control, and layers | Managers with one or two reports, or with more than ten |
 
-The `/leveling-ladder` skill computes the count, span, layers and time-in-level measures from a roster file, labels each as Measured, and does not print anything about a group smaller than five people. The thresholds are defaults of this repository, not standards, and the readings above are Draft.
+The `/leveling-ladder` skill computes the count, span, layers and time-in-level measures from a roster file, labels each as Measured, and does not print anything about a group smaller than five people. The thresholds are defaults of this repository, not standards, and the readings above are Early.
 
 ## What not to do
 
@@ -155,4 +155,4 @@ The `/leveling-ladder` skill computes the count, span, layers and time-in-level 
 - Will Larson, [Staff engineer archetypes](https://lethain.com/staff-engineer-archetypes/): Team Lead, Architect, Solver and Right Hand.
 - Dropbox, [Engineering Career Framework](https://dropbox.github.io/dbx-career-framework): a public ladder for comparison. Its page states no license, so the starter ladder in this repo was written without copying it.
 - swyx, [Every public engineering career ladder](https://swyx.io/career-ladders): an index of public ladders.
-- The level bands by headcount, the typical spans, the two-quarter default, the six axes and the health readings are this repository's judgment. They are Draft and have not been validated in real engagements.
+- The level bands by headcount, the typical spans, the two-quarter default, the six axes and the health readings are this repository's judgment. They are Early and have not been validated in real engagements.

@@ -1,6 +1,6 @@
 ---
 name: interview-question-bank
-status: draft
+status: early
 use: pick questions for each interview in the loop plan
 ---
 

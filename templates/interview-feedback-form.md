@@ -1,6 +1,6 @@
 ---
 name: interview-feedback-form
-status: draft
+status: early
 use: each interviewer fills one in within 24 hours, before reading anyone else's feedback
 ---
 

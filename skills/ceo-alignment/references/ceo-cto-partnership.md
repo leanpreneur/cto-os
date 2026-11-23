@@ -1,6 +1,6 @@
 ---
 name: ceo-cto-partnership
-status: draft
+status: early
 audience: CTO or VP Engineering working with a CEO and a board
 ---
 

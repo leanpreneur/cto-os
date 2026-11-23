@@ -89,6 +89,20 @@ class Coverage(unittest.TestCase):
         self.assertIn("Technical judgment", msgs)
         os.unlink(path)
 
+    def test_first_draft_example_fails_in_the_documented_way(self):
+        # examples/loop-draft.json is the "before" in examples/hiring. Worked out by hand:
+        # judgment, design and ai are each covered by engineer-a only (3 failures);
+        # collab is covered by one interviewer and is trainable, the technical interview scores four
+        # competencies, and the plan has no ai_policy and no debrief (4 warnings).
+        code, out, _ = run("coverage", "--plan", os.path.join(HERE, "examples", "loop-draft.json"), "--format", "json")
+        data = json.loads(out)
+        self.assertEqual(code, 1)
+        self.assertEqual(sorted(f["code"] for f in data["findings"] if f["level"] == "FAIL"),
+                         ["thin-coverage"] * 3)
+        self.assertEqual(sorted(f["code"] for f in data["findings"] if f["level"] == "WARN"),
+                         ["no-ai-policy", "no-debrief", "thin-coverage", "too-many-competencies"])
+        self.assertEqual(data["candidate_minutes"], 285)
+
     def test_markdown_has_matrix_and_result(self):
         code, out, _ = run("coverage", "--plan", GOOD_PLAN)
         self.assertEqual(code, 0)

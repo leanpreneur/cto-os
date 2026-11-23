@@ -1,6 +1,6 @@
 ---
 name: role-scorecard
-status: draft
+status: early
 use: one per open engineering role, written before the job post
 ---
 

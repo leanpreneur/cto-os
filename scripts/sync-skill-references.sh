@@ -44,4 +44,7 @@ sync templates promotion-packet.md leveling-ladder
 # The routing table is the source for the situations page.
 python3 "$root/skills/ask-cto-os/scripts/check_routes.py" render > "$root/docs/situations.md"
 
+# The script output shown in examples/ must match what the scripts print.
+python3 "$root/scripts/build_examples.py"
+
 echo "Skill references synced."

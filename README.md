@@ -12,6 +12,17 @@ Popular agent skill collections focus on how a coding agent writes, reviews and 
 
 CTO OS covers that job. Every artifact exists in two forms: a document you can read and adapt, and an agent skill that runs it with you. Skills interview you and read your own repositories and documents, so the output reflects your organization instead of a generic target.
 
+## See what it produces
+
+Synthetic examples, each marked as script output or written by hand:
+
+- [An interview loop that fails the coverage check, and the fix](examples/hiring/loop-before-after.md)
+- [A debrief summary that flags missing evidence and a score gap](examples/hiring/debrief-summary.md)
+- [An org shape report for a 29-person organization](examples/leveling/org-shape-report.md)
+- [A promotion packet that ends in "not yet"](examples/leveling/promotion-packet-not-yet.md)
+- [Router answers, including one for a topic CTO OS does not cover](examples/router/sample-answers.md)
+- [All examples](examples/README.md)
+
 ## Start here
 
 Not sure which artifact you need? Run `/ask-cto-os` and describe what is happening, or look up your situation in the [situations table](docs/situations.md).
@@ -52,15 +63,17 @@ Open Claude Code in any folder and run `/ask-cto-os` to be pointed to the right 
 
 ## ADOPT
 
-ADOPT is the author's framework for AI transformation maturity: **A**lign on outcomes, **D**esign an AI-native SDLC, **O**rchestrate human and AI roles, **P**ut guardrails in place, **T**ransform culture and skills. It is described in the essay [From Copilot to Autonomous Engineering](https://abbasraza.com/essays/from-copilot-to-autonomous-engineering/). The assessment in this repo extends the essay with a scoring rubric, a foundations gate built on the seven capabilities in [DORA's AI Capabilities Model](https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model), and an explicit context practice inside D. All three extensions are Draft.
+ADOPT is the author's framework for AI transformation maturity: **A**lign on outcomes, **D**esign an AI-native SDLC, **O**rchestrate human and AI roles, **P**ut guardrails in place, **T**ransform culture and skills. It is described in the essay [From Copilot to Autonomous Engineering](https://abbasraza.com/essays/from-copilot-to-autonomous-engineering/). The assessment in this repo extends the essay with a scoring rubric, a foundations gate built on the seven capabilities in [DORA's AI Capabilities Model](https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model), and an explicit context practice inside D. All three extensions are Early.
 
 ## Status labels
 
 Every artifact declares a status in its header.
 
-- **Draft**: written, not yet applied in a real engagement.
-- **Used**: applied in a real engagement.
+- **Early**: written, not yet applied in a real engagement.
+- **Field-tested**: applied in a real engagement.
 - **Proven**: applied more than once and revised from what was learned.
+
+Today every artifact is Early. As artifacts are applied in real engagements, their labels change and the CHANGELOG says what was learned.
 
 ## Next
 
@@ -72,7 +85,7 @@ Incident response and blameless postmortem, and a CTO scorecard with a 360 quest
 - [claude-code-templates](https://github.com/davila7/claude-code-templates): includes a cto-advisor reference skill.
 - [claude-skills](https://github.com/alirezarezvani/claude-skills): large library with executive persona skills.
 
-CTO OS differs in three ways: its skills produce finished artifacts instead of advice, it adapts to company stage and measures your own baseline, and each artifact is labeled Draft, Used or Proven. See [docs/related-work.md](docs/related-work.md).
+CTO OS differs in three ways: its skills produce finished artifacts instead of advice, it adapts to company stage and measures your own baseline, and each artifact is labeled Early, Field-tested or Proven. See [docs/related-work.md](docs/related-work.md).
 
 ## About
 
@@ -82,7 +95,7 @@ CTO OS differs in three ways: its skills produce finished artifacts instead of a
 
 ## Maintaining
 
-Playbooks and templates are the source of truth. After editing one, run `scripts/sync-skill-references.sh` to refresh the copy bundled with its skill. The script also regenerates `docs/situations.md` from the routing table.
+Playbooks and templates are the source of truth. After editing one, run `scripts/sync-skill-references.sh` to refresh the copy bundled with its skill. The script also regenerates `docs/situations.md` from the routing table and refreshes the script output shown in `examples/`. Check them with `python3 scripts/build_examples.py --check`.
 
 When you add a playbook, template or skill, add it to `skills/ask-cto-os/references/routes.json`, then run `python3 skills/ask-cto-os/scripts/check_routes.py check`. It fails if any artifact cannot be reached from a situation.
 

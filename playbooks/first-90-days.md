@@ -1,6 +1,6 @@
 ---
 name: first-90-days
-status: draft
+status: early
 audience: CTO or VP Engineering joining a company or taking over an engineering organization
 ---
 
@@ -97,7 +97,7 @@ Facts only, no recommendations. Sections: system, delivery, people, customers, c
 ## Days 61 to 90: Deliver
 
 1. **Ship one visible win.** Choose from the diagnosis something a customer or the CEO can see within thirty days of effort: a fixed deployment pipeline, removal of the top incident cause, a cleared escalation.
-2. **Start the first structural change:** a hiring plan, an on-call rotation, a release process, or an AI-assisted development rollout with a measured pilot. Before an AI rollout, run the [ADOPT assessment](adopt-assessment.md) to find your starting level.
+2. **Start the first structural change:** a [hiring plan](hiring.md) with a [leveling ladder](leveling.md), an on-call rotation, a release process, or an AI-assisted development rollout with a measured pilot. Before an AI rollout, run the [ADOPT assessment](adopt-assessment.md) to find your starting level.
 3. **Deliver the 90-day review** to the CEO, and to the board if asked: baseline against current, plan, risks and asks.
 4. **Reset team goals and 1:1 cadence** to match the plan.
 

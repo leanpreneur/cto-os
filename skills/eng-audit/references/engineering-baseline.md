@@ -1,6 +1,6 @@
 ---
 name: engineering-baseline
-status: draft
+status: early
 audience: CTO or VP Engineering who needs delivery numbers in the first 30 days, or before an AI rollout
 ---
 
@@ -96,4 +96,4 @@ Rerun every quarter, with the same window and threshold, and keep the old report
 ## Sources
 
 - [DORA metrics](https://dora.dev/guides/dora-metrics/): the delivery metrics this playbook maps to. DORA has since extended its set, so check the site for current definitions.
-- The 400-line change size default, the Proxy definitions and the reading table are this repository's judgment. They are Draft and have not been validated against real engagements.
+- The 400-line change size default, the Proxy definitions and the reading table are this repository's judgment. They are Early and have not been validated against real engagements.
