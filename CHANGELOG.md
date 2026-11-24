@@ -13,7 +13,8 @@ Added
 Changed
 - The router's example for a topic CTO OS does not cover is now SOC 2, because incident response is covered. Security and compliance programs are still listed as not covered.
 - The first 90 days and engineering baseline playbooks link to the incident response playbook.
-- README: three rows in the artifact table, the example links, the run line, and the Next list.
+- README: three rows in the artifact table, the example links, the run line, and the Next list. Install steps now cover Codex and Gemini CLI as well as Claude Code, and say that the skills have been run in Claude Code and not yet in the other two.
+- The router names no tool-specific mechanism. It tells Codex users to write `$skill-name`, and Gemini CLI users to describe the task.
 - `scripts/sync-skill-references.sh` bundles the playbook and templates with the new skill.
 
 Tested

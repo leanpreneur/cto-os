@@ -35,7 +35,7 @@ Reply in under 150 words, in this shape:
 
 **Your situation:** one line, in the user's own words.
 
-**Start with:** the skill, written as `/skill-name`, or the document. One sentence on why.
+**Start with:** the skill, written as `/skill-name` (`$skill-name` in Codex, a plain description in Gemini CLI), or the document. One sentence on why.
 
 **You will get:** from `you_get`.
 
@@ -47,7 +47,7 @@ End with: "Say go and I will run it."
 
 ## Step 4: Run it when the user says go
 
-- If `start_with` is a skill, load it with the Skill tool and follow it. If you cannot load it, tell the user to run `/skill-name`. Some skills have modes, such as build, measure, level a person, plan and debrief. `you_get` says which mode fits, so tell the skill.
+- If `start_with` is a skill, load it with your tool's skill mechanism and follow it. If you cannot load it, tell the user to run `/skill-name`, or `$skill-name` in Codex. In Gemini CLI, tell them to describe the task so the skill activates. Some skills have modes, such as build, measure, level a person, plan and debrief. `you_get` says which mode fits, so tell the skill.
 - If `start_with` is null, open the first document in `read` and walk the user through the part that applies, in plain words. The documents live in the cto-os repository. If it is not on disk, give the user the link `https://github.com/leanpreneur/cto-os/blob/main/<path>`.
 - Do not run a skill before the user says go, unless the message already asked you to run it.
 

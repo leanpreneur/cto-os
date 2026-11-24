@@ -57,15 +57,37 @@ Not sure which artifact you need? Run `/ask-cto-os` and describe what is happeni
 | [Decision Record](templates/decision-record.md) | One-page template for architecture and organization decisions | Template |
 | [Principles](PRINCIPLES.md) | The ten rules the rest of the repo follows | Reference |
 
-## Use the skills with Claude Code
+## Use the skills
+
+The skills are folders with a `SKILL.md`, plus `scripts/` and `references/`. Claude Code, OpenAI Codex and Gemini CLI all read that layout. Clone the repository once:
 
 ```bash
 git clone https://github.com/leanpreneur/cto-os.git
+```
+
+**Claude Code**
+
+```bash
 mkdir -p ~/.claude/skills
 cp -r cto-os/skills/* ~/.claude/skills/
 ```
 
-Open Claude Code in any folder and run `/ask-cto-os` to be pointed to the right one, or run `/cto-day-one`, `/adopt-assess`, `/ceo-alignment`, `/board-update`, `/eng-audit`, `/hiring-plan`, `/leveling-ladder` or `/incident-response` directly. Each skill bundles its own copy of the playbook it uses, so nothing else is needed. `/eng-audit` needs `python3` and `git`. `/hiring-plan`, `/leveling-ladder`, `/incident-response` and the optional keyword matcher in `/ask-cto-os` run small Python scripts and need `python3`.
+Open Claude Code in any folder and run `/ask-cto-os` to be pointed to the right one, or run a skill directly.
+
+**Codex and Gemini CLI**
+
+```bash
+mkdir -p ~/.agents/skills
+cp -r cto-os/skills/* ~/.agents/skills/
+```
+
+Both tools read `~/.agents/skills`. Gemini CLI also reads `~/.gemini/skills`. In Codex, type `$ask-cto-os`, or run `/skills` and pick one. Gemini CLI loads a skill when your request matches its description and asks you to confirm. Run `/skills list` to see what it found.
+
+**Other tools** that read `SKILL.md` folders: copy the folders to the place the tool looks for skills.
+
+The skills are `/cto-day-one`, `/adopt-assess`, `/ceo-alignment`, `/board-update`, `/eng-audit`, `/hiring-plan`, `/leveling-ladder` and `/incident-response`. In Codex, write `$` instead of `/`. In Gemini CLI, describe the task in words. This repository has been run in Claude Code. Codex and Gemini CLI document the same folder layout, but the skills have not been run there yet. The playbooks and templates are plain markdown and work in any tool, or with none.
+
+Each skill bundles its own copy of the playbook it uses, so nothing else is needed. `/eng-audit` needs `python3` and `git`. `/hiring-plan`, `/leveling-ladder`, `/incident-response` and the optional keyword matcher in `/ask-cto-os` run small Python scripts and need `python3`.
 
 ## ADOPT
 
