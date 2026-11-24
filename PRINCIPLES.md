@@ -20,4 +20,4 @@ Ten rules that every artifact in this repository follows.
 
 9. **Report outcomes to the CEO and the board.** Customers, revenue, reliability, cost, risk and people. Translate technical work into those terms every time.
 
-10. **Use evidence over opinion, including your own.** Label each artifact Early, Field-tested or Proven. Revise it when reality disagrees.
+10. **Use evidence over opinion, including your own.** Say where each number and threshold comes from, and revise it when reality disagrees.

@@ -1,6 +1,5 @@
 ---
 name: promotion-packet
-status: early
 use: one per person proposed for a new level, written before calibration
 ---
 

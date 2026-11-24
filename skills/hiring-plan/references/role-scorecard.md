@@ -1,6 +1,5 @@
 ---
 name: role-scorecard
-status: early
 use: one per open engineering role, written before the job post
 ---
 

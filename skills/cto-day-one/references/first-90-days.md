@@ -1,6 +1,5 @@
 ---
 name: first-90-days
-status: early
 audience: CTO or VP Engineering joining a company or taking over an engineering organization
 ---
 
@@ -52,7 +51,7 @@ Record answers in one shared table. Look for the same answer from unrelated peop
 ### 2. Read the system
 
 - Ship a small change yourself, start to finish. Note every step and wait.
-- Read the last ten incidents and their postmortems, or note that none exist.
+- Read the last ten incidents and their postmortems, or note that none exist. The [incident response](https://github.com/leanpreneur/cto-os/blob/main/playbooks/incident-response.md) playbook says what a good one contains.
 - Review twenty recent pull requests for size, review time and test coverage.
 - Read the on-call history. Count pages per week and who answers them.
 - Read the architecture documentation, then compare it with the code.
@@ -97,7 +96,7 @@ Facts only, no recommendations. Sections: system, delivery, people, customers, c
 ## Days 61 to 90: Deliver
 
 1. **Ship one visible win.** Choose from the diagnosis something a customer or the CEO can see within thirty days of effort: a fixed deployment pipeline, removal of the top incident cause, a cleared escalation.
-2. **Start the first structural change:** a [hiring plan](https://github.com/leanpreneur/cto-os/blob/main/playbooks/hiring.md) with a [leveling ladder](https://github.com/leanpreneur/cto-os/blob/main/playbooks/leveling.md), an on-call rotation, a release process, or an AI-assisted development rollout with a measured pilot. Before an AI rollout, run the [ADOPT assessment](https://github.com/leanpreneur/cto-os/blob/main/playbooks/adopt-assessment.md) to find your starting level.
+2. **Start the first structural change:** a [hiring plan](https://github.com/leanpreneur/cto-os/blob/main/playbooks/hiring.md) with a [leveling ladder](https://github.com/leanpreneur/cto-os/blob/main/playbooks/leveling.md), an on-call rotation with an [incident process](https://github.com/leanpreneur/cto-os/blob/main/playbooks/incident-response.md), a release process, or an AI-assisted development rollout with a measured pilot. Before an AI rollout, run the [ADOPT assessment](https://github.com/leanpreneur/cto-os/blob/main/playbooks/adopt-assessment.md) to find your starting level.
 3. **Deliver the 90-day review** to the CEO, and to the board if asked: baseline against current, plan, risks and asks.
 4. **Reset team goals and 1:1 cadence** to match the plan.
 

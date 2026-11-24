@@ -1,6 +1,5 @@
 ---
 name: incident-response
-status: early
 audience: CTO or engineering leader who needs a written way to run production incidents and learn from them, or who inherited an on-call rota and no process
 ---
 
@@ -193,4 +192,4 @@ Use the median and the longest value, not the mean. With under about 20 incident
 - Google, *Site Reliability Engineering*, chapter 15, [Postmortem Culture: Learning from Failure](https://sre.google/sre-book/postmortem-culture/) (John Lunney and Sue Lueder): the blameless premise, the common postmortem triggers and the elements of a good postmortem. The chapter describes review sessions but no mechanism for tracking action items to completion. The follow-through rules above are this repository's.
 - PagerDuty, [Incident Response Guide](https://docs.pagerduty.com/ops-guides/incident-response-guide): roles such as commander, deputy and scribe, and the advice to treat an uncertain severity as the higher one. The guide states a copyright, so nothing here is copied from it. The severity table and the role table were written for this repository.
 - John Allspaw, [Blameless PostMortems and a Just Culture](https://www.etsy.com/codeascraft/blameless-postmortems), Etsy Code as Craft, 22 May 2012: the argument that blame hides the detail you need, and the "second stories".
-- The severity levels, update cadences, the 15-minute routine, the eight-item and 90-day limits, the 7-day publishing target, the 30-minute watch period and the 20-incident threshold are this repository's judgment. They are Early and have not been validated in real engagements.
+- The severity levels, update cadences, the 15-minute routine, the eight-item and 90-day limits, the 7-day publishing target, the 30-minute watch period and the 20-incident threshold are this repository's judgment. They have not been validated across companies.

@@ -1,6 +1,5 @@
 ---
 name: interview-loop-plan
-status: early
 use: one per open role, after the role scorecard and before the first interview
 ---
 

@@ -1,6 +1,5 @@
 ---
 name: hiring
-status: early
 audience: CTO or engineering manager who is about to hire engineers, or who inherited a hiring process nobody wrote down
 ---
 
@@ -209,4 +208,4 @@ Do not claim quality of hire from fewer than about 20 hires. With a handful, rea
 - Sackett, Zhang, Berry and Lievens (2022), "Revisiting meta-analytic estimates of validity in personnel selection: Addressing systematic overcorrection for restriction of range," *Journal of Applied Psychology* 107(11), 2040 to 2068 ([record](https://ink.library.smu.edu.sg/lkcsb_research/6894)). The figures above are as reported in a [summary from the Society for Industrial and Organizational Psychology](https://www.siop.org/tip-article/is-cognitive-ability-the-best-predictor-of-job-performance). The paper itself has not been checked line by line.
 - Geoff Smart and Randy Street, *Who: The A Method for Hiring* (2008): the scorecard structure.
 - New York City Local Law 144 of 2021 on automated employment decision tools, enforced from 5 July 2023.
-- The five-hour cap, the 48-hour offer target, the three-competency limit per interview, the 1 to 4 scale and the 20-hire threshold are this repository's judgment. They are Early and have not been validated in real engagements.
+- The five-hour cap, the 48-hour offer target, the three-competency limit per interview, the 1 to 4 scale and the 20-hire threshold are this repository's judgment. They have not been validated across companies.

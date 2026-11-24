@@ -1,6 +1,5 @@
 ---
 name: leveling-ladder
-status: early
 use: starter engineering ladder to adapt, then publish. Written for this repository, not copied from another ladder.
 ---
 

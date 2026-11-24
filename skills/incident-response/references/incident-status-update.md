@@ -1,6 +1,5 @@
 ---
 name: incident-status-update
-status: early
 use: copy for every update, on the clock set by the severity
 ---
 

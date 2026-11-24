@@ -1,6 +1,5 @@
 ---
 name: incident-severity-guide
-status: early
 use: one page, agreed with the CEO before the next incident, pinned where responders work
 ---
 

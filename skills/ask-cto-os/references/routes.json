@@ -1,151 +1,461 @@
 {
-  "version": 1,
-  "situations": [
-    {
-      "id": "new-role",
-      "situation": "I am starting a new CTO or engineering leadership role",
-      "signals": ["starting as cto", "new cto", "new role", "first 90 days", "first day", "just joined", "taking over engineering", "30 60 90", "new vp engineering", "start monday", "start next week"],
-      "start_with": "cto-day-one",
-      "then": ["eng-audit", "ceo-alignment"],
-      "read": ["playbooks/first-90-days.md"],
-      "ask_first": "What is the company stage, and how many engineers are there?",
-      "you_get": "A tailored 30, 60 and 90 day plan, a listening tour agenda and a baseline metrics table."
-    },
-    {
-      "id": "ceo-alignment",
-      "situation": "The CEO and I are not aligned, or I never agreed what the CEO expects from me",
-      "signals": ["ceo expectations", "not aligned with the ceo", "what does the ceo expect", "decision rights", "operating agreement", "ceo and i", "report to the ceo", "founder expectations", "unclear expectations", "who decides", "not aligned", "what the ceo expects"],
-      "start_with": "ceo-alignment",
-      "then": ["board-update"],
-      "read": ["playbooks/ceo-cto-partnership.md", "templates/ceo-cto-operating-agreement.md"],
-      "ask_first": "What has gone wrong or stayed unclear between you and the CEO?",
-      "you_get": "A drafted operating agreement, the questions to settle with the CEO, and a 20 minute meeting plan."
-    },
-    {
-      "id": "hard-conversation-ceo",
-      "situation": "I have to give the CEO bad news, or I disagree with the CEO",
-      "signals": ["bad news", "tell the ceo", "disagree with the ceo", "push back on the ceo", "deadline will slip", "ceo is wrong", "break bad news", "ceo wants something unrealistic", "say no to the ceo"],
-      "start_with": null,
-      "then": ["ceo-alignment"],
-      "read": ["playbooks/ceo-cto-partnership.md"],
-      "ask_first": "What is the news or the disagreement, and what does the CEO want?",
-      "you_get": "The bad-news and disagreement scripts from the playbook. Run the skill afterward if there is no written agreement on decision rights."
-    },
-    {
-      "id": "board",
-      "situation": "I have a board meeting or a CEO review coming and need to report",
-      "signals": ["board meeting", "board deck", "board update", "report to the board", "quarterly update", "investor update", "ceo pre-read", "board report", "present to the board"],
-      "start_with": "board-update",
-      "then": ["eng-audit"],
-      "read": ["templates/board-update.md", "playbooks/ceo-cto-partnership.md"],
-      "ask_first": "When is the meeting, and which numbers do you already have?",
-      "you_get": "A one-page headline with six appendices, status rules, a risk register and a CEO pre-read."
-    },
-    {
-      "id": "ai-maturity",
-      "situation": "We use AI tools but I cannot show results, or leadership asks about our AI strategy",
-      "signals": ["ai strategy", "ai maturity", "ai adoption", "copilot", "ai coding tools", "ai rollout", "ai native", "how mature are we", "adopt framework", "ai pilot", "board asks about ai", "ai transformation"],
-      "start_with": "adopt-assess",
-      "then": ["board-update"],
-      "read": ["playbooks/adopt-assessment.md"],
-      "ask_first": "Can you run git on your repositories? If yes, run /eng-audit first so the assessment has evidence.",
-      "you_get": "A foundations check, scores on five dimensions, the constraint that binds, three moves and a one-page result for the CEO."
-    },
-    {
-      "id": "measure-delivery",
-      "situation": "I need numbers on how engineering delivers: change size, release cadence, reverts, who holds knowledge",
-      "signals": ["how fast do we ship", "delivery metrics", "dora metrics", "baseline metrics", "change size", "lead time", "deployment frequency", "bus factor", "i do not trust the metrics", "release cadence", "pull request size", "engineering metrics"],
-      "start_with": "eng-audit",
-      "then": ["adopt-assess", "board-update"],
-      "read": ["playbooks/engineering-baseline.md"],
-      "ask_first": "Which repositories, and which 90-day window?",
-      "you_get": "A report from git history with every number labeled Measured, Proxy or Unknown, and baseline rows for the First 90 Days table."
-    },
-    {
-      "id": "hire",
-      "situation": "I need to hire an engineer or manager, or my hiring process is inconsistent",
-      "signals": ["hire an engineer", "hiring", "open role", "job description", "interview loop", "interview questions", "scorecard", "recruiting", "hire a staff engineer", "hire a manager", "first engineering hire", "candidates keep failing", "inconsistent interviews"],
-      "start_with": "hiring-plan",
-      "then": ["leveling-ladder"],
-      "read": ["playbooks/hiring.md", "templates/role-scorecard.md", "templates/interview-loop-plan.md", "templates/interview-question-bank.md"],
-      "ask_first": "What is the role and level, and who can interview?",
-      "you_get": "A role scorecard, an interview loop checked for coverage, questions with rubrics, a work sample and a candidate message."
-    },
-    {
-      "id": "debrief",
-      "situation": "The interviews are done and I need to decide on a candidate",
-      "signals": ["hiring debrief", "decide on a candidate", "interviews are done", "interview feedback", "debrief", "hire or no hire", "feedback from interviewers", "candidate decision", "split vote"],
-      "start_with": "hiring-plan",
-      "then": [],
-      "read": ["templates/hiring-debrief.md", "templates/interview-feedback-form.md"],
-      "ask_first": "What scores and evidence did each interviewer give?",
-      "you_get": "A summary of scores by competency, missing evidence, score gaps with the evidence behind them, and questions for the meeting. Use debrief mode."
-    },
-    {
-      "id": "ladder",
-      "situation": "We have no career ladder, or levels and titles are inconsistent",
-      "signals": ["career ladder", "levels", "leveling", "title inflation", "engineering levels", "job levels", "titles", "what is a senior engineer", "levelling", "no ladder"],
-      "start_with": "leveling-ladder",
-      "then": ["hiring-plan"],
-      "read": ["playbooks/leveling.md", "templates/leveling-ladder.md"],
-      "ask_first": "How many engineers and managers do you have, and what levels or titles exist today?",
-      "you_get": "A ladder adapted to your company, a pay band structure, a calibration calendar and the hard conversations written out. Use build mode."
-    },
-    {
-      "id": "promotion",
-      "situation": "Someone is up for promotion, or it is calibration time",
-      "signals": ["promotion", "promote", "calibration", "promotion packet", "ready for the next level", "not yet conversation", "performance cycle", "up for promotion", "calibrate levels"],
-      "start_with": "leveling-ladder",
-      "then": [],
-      "read": ["playbooks/leveling.md", "templates/promotion-packet.md"],
-      "ask_first": "What evidence do you have for the person, by axis and with dates?",
-      "you_get": "A level recommendation against your ladder, a filled promotion packet and the evidence that would close each gap. Use level-a-person mode."
-    },
-    {
-      "id": "candidate-level",
-      "situation": "I need to decide what level a candidate or a new hire should be",
-      "signals": ["what level should", "level a candidate", "downlevel", "offer level", "leveling a candidate", "which level for this hire", "level of the offer", "between two levels"],
-      "start_with": "leveling-ladder",
-      "then": ["hiring-plan"],
-      "read": ["playbooks/leveling.md", "playbooks/hiring.md"],
-      "ask_first": "What evidence did the loop produce, and which ladder do you use?",
-      "you_get": "A level recommendation with evidence by axis, and the evidence that would reach the next level. Use level-a-person mode."
-    },
-    {
-      "id": "org-shape",
-      "situation": "I want to know if my organization is shaped right: spans, layers, managers, time in level",
-      "signals": ["span of control", "too many managers", "layers", "org structure", "reorg", "org shape", "manager to engineer ratio", "stuck at level", "top heavy", "how many direct reports", "spans of control", "spans"],
-      "start_with": "leveling-ladder",
-      "then": ["eng-audit"],
-      "read": ["playbooks/leveling.md"],
-      "ask_first": "Can you export a roster with opaque ids, levels, tracks and manager ids?",
-      "you_get": "Counts by level, spans, layers and time in level, with small groups hidden. Use measure mode."
-    },
-    {
-      "id": "record-decision",
-      "situation": "I need to record an architecture, vendor or organization decision, or the team keeps relitigating one",
-      "signals": ["architecture decision", "decision record", "adr", "we keep revisiting", "vendor decision", "write down the decision", "relitigate", "why did we choose", "technology choice"],
-      "start_with": null,
-      "then": [],
-      "read": ["templates/decision-record.md"],
-      "ask_first": "What is the decision, and who has to live with it?",
-      "you_get": "A one-page template: context, options, decision, consequences and an exit plan."
-    },
-    {
-      "id": "unsure",
-      "situation": "I am not sure where to start",
-      "signals": ["where do i start", "not sure where to start", "what can this do", "what should i do first", "overview", "help me get started", "what is in this repo"],
-      "start_with": null,
-      "then": ["cto-day-one"],
-      "read": ["PRINCIPLES.md"],
-      "ask_first": "What is your role, what stage is the company, and what is the one problem you would fix first?",
-      "you_get": "A route to the right artifact after one question. If you are new in the role, start with the First 90 Days."
-    }
-  ],
-  "gaps": [
-    {"topic": "Incident response and blameless postmortems", "closest": null},
-    {"topic": "A scorecard or 360 review of the CTO", "closest": null},
-    {"topic": "Architecture reviews and cloud cost reviews", "closest": "templates/decision-record.md"},
-    {"topic": "Security and compliance programs", "closest": null}
-  ]
+ "version": 1,
+ "situations": [
+  {
+   "id": "new-role",
+   "situation": "I am starting a new CTO or engineering leadership role",
+   "signals": [
+    "starting as cto",
+    "new cto",
+    "new role",
+    "first 90 days",
+    "first day",
+    "just joined",
+    "taking over engineering",
+    "30 60 90",
+    "new vp engineering",
+    "start monday",
+    "start next week"
+   ],
+   "start_with": "cto-day-one",
+   "then": [
+    "eng-audit",
+    "ceo-alignment"
+   ],
+   "read": [
+    "playbooks/first-90-days.md"
+   ],
+   "ask_first": "What is the company stage, and how many engineers are there?",
+   "you_get": "A tailored 30, 60 and 90 day plan, a listening tour agenda and a baseline metrics table."
+  },
+  {
+   "id": "ceo-alignment",
+   "situation": "The CEO and I are not aligned, or I never agreed what the CEO expects from me",
+   "signals": [
+    "ceo expectations",
+    "not aligned with the ceo",
+    "what does the ceo expect",
+    "decision rights",
+    "operating agreement",
+    "ceo and i",
+    "report to the ceo",
+    "founder expectations",
+    "unclear expectations",
+    "who decides",
+    "not aligned",
+    "what the ceo expects"
+   ],
+   "start_with": "ceo-alignment",
+   "then": [
+    "board-update"
+   ],
+   "read": [
+    "playbooks/ceo-cto-partnership.md",
+    "templates/ceo-cto-operating-agreement.md"
+   ],
+   "ask_first": "What has gone wrong or stayed unclear between you and the CEO?",
+   "you_get": "A drafted operating agreement, the questions to settle with the CEO, and a 20 minute meeting plan."
+  },
+  {
+   "id": "hard-conversation-ceo",
+   "situation": "I have to give the CEO bad news, or I disagree with the CEO",
+   "signals": [
+    "bad news",
+    "tell the ceo",
+    "disagree with the ceo",
+    "push back on the ceo",
+    "deadline will slip",
+    "ceo is wrong",
+    "break bad news",
+    "ceo wants something unrealistic",
+    "say no to the ceo"
+   ],
+   "start_with": null,
+   "then": [
+    "ceo-alignment"
+   ],
+   "read": [
+    "playbooks/ceo-cto-partnership.md"
+   ],
+   "ask_first": "What is the news or the disagreement, and what does the CEO want?",
+   "you_get": "The bad-news and disagreement scripts from the playbook. Run the skill afterward if there is no written agreement on decision rights."
+  },
+  {
+   "id": "board",
+   "situation": "I have a board meeting or a CEO review coming and need to report",
+   "signals": [
+    "board meeting",
+    "board deck",
+    "board update",
+    "report to the board",
+    "quarterly update",
+    "investor update",
+    "ceo pre-read",
+    "board report",
+    "present to the board"
+   ],
+   "start_with": "board-update",
+   "then": [
+    "eng-audit"
+   ],
+   "read": [
+    "templates/board-update.md",
+    "playbooks/ceo-cto-partnership.md"
+   ],
+   "ask_first": "When is the meeting, and which numbers do you already have?",
+   "you_get": "A one-page headline with six appendices, status rules, a risk register and a CEO pre-read."
+  },
+  {
+   "id": "ai-maturity",
+   "situation": "We use AI tools but I cannot show results, or leadership asks about our AI strategy",
+   "signals": [
+    "ai strategy",
+    "ai maturity",
+    "ai adoption",
+    "copilot",
+    "ai coding tools",
+    "ai rollout",
+    "ai native",
+    "how mature are we",
+    "adopt framework",
+    "ai pilot",
+    "board asks about ai",
+    "ai transformation"
+   ],
+   "start_with": "adopt-assess",
+   "then": [
+    "board-update"
+   ],
+   "read": [
+    "playbooks/adopt-assessment.md"
+   ],
+   "ask_first": "Can you run git on your repositories? If yes, run /eng-audit first so the assessment has evidence.",
+   "you_get": "A foundations check, scores on five dimensions, the constraint that binds, three moves and a one-page result for the CEO."
+  },
+  {
+   "id": "measure-delivery",
+   "situation": "I need numbers on how engineering delivers: change size, release cadence, reverts, who holds knowledge",
+   "signals": [
+    "how fast do we ship",
+    "delivery metrics",
+    "dora metrics",
+    "baseline metrics",
+    "change size",
+    "lead time",
+    "deployment frequency",
+    "bus factor",
+    "i do not trust the metrics",
+    "release cadence",
+    "pull request size",
+    "engineering metrics"
+   ],
+   "start_with": "eng-audit",
+   "then": [
+    "adopt-assess",
+    "board-update"
+   ],
+   "read": [
+    "playbooks/engineering-baseline.md"
+   ],
+   "ask_first": "Which repositories, and which 90-day window?",
+   "you_get": "A report from git history with every number labeled Measured, Proxy or Unknown, and baseline rows for the First 90 Days table."
+  },
+  {
+   "id": "hire",
+   "situation": "I need to hire an engineer or manager, or my hiring process is inconsistent",
+   "signals": [
+    "hire an engineer",
+    "hiring",
+    "open role",
+    "job description",
+    "interview loop",
+    "interview questions",
+    "scorecard",
+    "recruiting",
+    "hire a staff engineer",
+    "hire a manager",
+    "first engineering hire",
+    "candidates keep failing",
+    "inconsistent interviews"
+   ],
+   "start_with": "hiring-plan",
+   "then": [
+    "leveling-ladder"
+   ],
+   "read": [
+    "playbooks/hiring.md",
+    "templates/role-scorecard.md",
+    "templates/interview-loop-plan.md",
+    "templates/interview-question-bank.md"
+   ],
+   "ask_first": "What is the role and level, and who can interview?",
+   "you_get": "A role scorecard, an interview loop checked for coverage, questions with rubrics, a work sample and a candidate message."
+  },
+  {
+   "id": "debrief",
+   "situation": "The interviews are done and I need to decide on a candidate",
+   "signals": [
+    "hiring debrief",
+    "decide on a candidate",
+    "interviews are done",
+    "interview feedback",
+    "debrief",
+    "hire or no hire",
+    "feedback from interviewers",
+    "candidate decision",
+    "split vote"
+   ],
+   "start_with": "hiring-plan",
+   "then": [],
+   "read": [
+    "templates/hiring-debrief.md",
+    "templates/interview-feedback-form.md"
+   ],
+   "ask_first": "What scores and evidence did each interviewer give?",
+   "you_get": "A summary of scores by competency, missing evidence, score gaps with the evidence behind them, and questions for the meeting. Use debrief mode."
+  },
+  {
+   "id": "ladder",
+   "situation": "We have no career ladder, or levels and titles are inconsistent",
+   "signals": [
+    "career ladder",
+    "levels",
+    "leveling",
+    "title inflation",
+    "engineering levels",
+    "job levels",
+    "titles",
+    "what is a senior engineer",
+    "levelling",
+    "no ladder"
+   ],
+   "start_with": "leveling-ladder",
+   "then": [
+    "hiring-plan"
+   ],
+   "read": [
+    "playbooks/leveling.md",
+    "templates/leveling-ladder.md"
+   ],
+   "ask_first": "How many engineers and managers do you have, and what levels or titles exist today?",
+   "you_get": "A ladder adapted to your company, a pay band structure, a calibration calendar and the hard conversations written out. Use build mode."
+  },
+  {
+   "id": "promotion",
+   "situation": "Someone is up for promotion, or it is calibration time",
+   "signals": [
+    "promotion",
+    "promote",
+    "calibration",
+    "promotion packet",
+    "ready for the next level",
+    "not yet conversation",
+    "performance cycle",
+    "up for promotion",
+    "calibrate levels"
+   ],
+   "start_with": "leveling-ladder",
+   "then": [],
+   "read": [
+    "playbooks/leveling.md",
+    "templates/promotion-packet.md"
+   ],
+   "ask_first": "What evidence do you have for the person, by axis and with dates?",
+   "you_get": "A level recommendation against your ladder, a filled promotion packet and the evidence that would close each gap. Use level-a-person mode."
+  },
+  {
+   "id": "candidate-level",
+   "situation": "I need to decide what level a candidate or a new hire should be",
+   "signals": [
+    "what level should",
+    "level a candidate",
+    "downlevel",
+    "offer level",
+    "leveling a candidate",
+    "which level for this hire",
+    "level of the offer",
+    "between two levels"
+   ],
+   "start_with": "leveling-ladder",
+   "then": [
+    "hiring-plan"
+   ],
+   "read": [
+    "playbooks/leveling.md",
+    "playbooks/hiring.md"
+   ],
+   "ask_first": "What evidence did the loop produce, and which ladder do you use?",
+   "you_get": "A level recommendation with evidence by axis, and the evidence that would reach the next level. Use level-a-person mode."
+  },
+  {
+   "id": "org-shape",
+   "situation": "I want to know if my organization is shaped right: spans, layers, managers, time in level",
+   "signals": [
+    "span of control",
+    "too many managers",
+    "layers",
+    "org structure",
+    "reorg",
+    "org shape",
+    "manager to engineer ratio",
+    "stuck at level",
+    "top heavy",
+    "how many direct reports",
+    "spans of control",
+    "spans"
+   ],
+   "start_with": "leveling-ladder",
+   "then": [
+    "eng-audit"
+   ],
+   "read": [
+    "playbooks/leveling.md"
+   ],
+   "ask_first": "Can you export a roster with opaque ids, levels, tracks and manager ids?",
+   "you_get": "Counts by level, spans, layers and time in level, with small groups hidden. Use measure mode."
+  },
+  {
+   "id": "incident-now",
+   "situation": "There is a production incident or outage happening now",
+   "signals": [
+    "outage",
+    "incident",
+    "production is down",
+    "site is down",
+    "customers cannot",
+    "we are down",
+    "sev1",
+    "sev2",
+    "paged",
+    "incident commander",
+    "we are having an incident",
+    "it is down",
+    "major outage"
+   ],
+   "start_with": "incident-response",
+   "then": [],
+   "read": [
+    "playbooks/incident-response.md",
+    "templates/incident-status-update.md"
+   ],
+   "ask_first": "What do customers see, how many, since when, and what changed recently?",
+   "you_get": "A severity, named roles, the first 15 minutes, customer, internal and CEO updates on a clock, and a running incident log. Use run mode."
+  },
+  {
+   "id": "incident-process",
+   "situation": "We have no incident process, or incidents are chaotic and the same ones keep coming back",
+   "signals": [
+    "incident process",
+    "incident management",
+    "severity levels",
+    "sev levels",
+    "on-call process",
+    "on call rota",
+    "no runbook",
+    "chaotic incidents",
+    "same incident again",
+    "repeat incidents",
+    "incident roles",
+    "status page",
+    "who is incident commander"
+   ],
+   "start_with": "incident-response",
+   "then": [
+    "board-update"
+   ],
+   "read": [
+    "playbooks/incident-response.md",
+    "templates/incident-severity-guide.md",
+    "templates/incident-log.md"
+   ],
+   "ask_first": "How many engineers are on call, and what happened in your last three incidents?",
+   "you_get": "A severity guide with your own thresholds, roles with backups, postmortem triggers, update templates and a one-page first-15-minutes card. Use prepare mode."
+  },
+  {
+   "id": "postmortem",
+   "situation": "I need to write or review a postmortem, or measure our incidents",
+   "signals": [
+    "postmortem",
+    "post-mortem",
+    "blameless",
+    "root cause analysis",
+    "rca",
+    "incident review",
+    "retrospective on the outage",
+    "action items from the incident",
+    "time to restore",
+    "time to detect",
+    "mttr",
+    "incident metrics"
+   ],
+   "start_with": "incident-response",
+   "then": [
+    "board-update"
+   ],
+   "read": [
+    "playbooks/incident-response.md",
+    "templates/postmortem.md"
+   ],
+   "ask_first": "Can you share the incident log or timeline notes, and the four times: impact start, detection, mitigation, resolution?",
+   "you_get": "A blameless postmortem drafted from your log, checked by script for missing owners, dates and times, and questions for the review meeting. Or incident measures from a CSV. Use postmortem or measure mode."
+  },
+  {
+   "id": "record-decision",
+   "situation": "I need to record an architecture, vendor or organization decision, or the team keeps relitigating one",
+   "signals": [
+    "architecture decision",
+    "decision record",
+    "adr",
+    "we keep revisiting",
+    "vendor decision",
+    "write down the decision",
+    "relitigate",
+    "why did we choose",
+    "technology choice"
+   ],
+   "start_with": null,
+   "then": [],
+   "read": [
+    "templates/decision-record.md"
+   ],
+   "ask_first": "What is the decision, and who has to live with it?",
+   "you_get": "A one-page template: context, options, decision, consequences and an exit plan."
+  },
+  {
+   "id": "unsure",
+   "situation": "I am not sure where to start",
+   "signals": [
+    "where do i start",
+    "not sure where to start",
+    "what can this do",
+    "what should i do first",
+    "overview",
+    "help me get started",
+    "what is in this repo"
+   ],
+   "start_with": null,
+   "then": [
+    "cto-day-one"
+   ],
+   "read": [
+    "PRINCIPLES.md"
+   ],
+   "ask_first": "What is your role, what stage is the company, and what is the one problem you would fix first?",
+   "you_get": "A route to the right artifact after one question. If you are new in the role, start with the First 90 Days."
+  }
+ ],
+ "gaps": [
+  {
+   "topic": "A scorecard or 360 review of the CTO",
+   "closest": null
+  },
+  {
+   "topic": "Architecture reviews and cloud cost reviews",
+   "closest": "templates/decision-record.md"
+  },
+  {
+   "topic": "Security and compliance programs",
+   "closest": null
+  }
+ ]
 }

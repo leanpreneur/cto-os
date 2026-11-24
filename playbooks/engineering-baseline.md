@@ -1,6 +1,5 @@
 ---
 name: engineering-baseline
-status: early
 audience: CTO or VP Engineering who needs delivery numbers in the first 30 days, or before an AI rollout
 ---
 
@@ -25,7 +24,7 @@ Most of the delivery numbers the [First 90 Days](first-90-days.md) plan asks for
 | AI traceability | Whether AI-assisted changes can be identified | Git | Commits that name an AI tool in a trailer or message | Measured |
 | Context files | What an engineer or agent can read before changing the system | Git tree | Instruction files, decision records, runbooks, CODEOWNERS, pull request template, CI configuration | Measured |
 
-The four delivery metrics follow the classic DORA set (see [Sources](#sources)). A **Proxy** is a number git can show that points toward the standard metric but is not the same thing. Never present a Proxy as the standard metric.
+The four delivery metrics follow the classic DORA set (see [Sources](#sources)). A **Proxy** is a number git can show that points toward the standard metric but is not the same thing. Never present a Proxy as the standard metric. Time to restore and change failure rate need incident data, and the [incident response](incident-response.md) playbook shows how to collect and read it.
 
 ## Run it
 
@@ -96,4 +95,4 @@ Rerun every quarter, with the same window and threshold, and keep the old report
 ## Sources
 
 - [DORA metrics](https://dora.dev/guides/dora-metrics/): the delivery metrics this playbook maps to. DORA has since extended its set, so check the site for current definitions.
-- The 400-line change size default, the Proxy definitions and the reading table are this repository's judgment. They are Early and have not been validated against real engagements.
+- The 400-line change size default, the Proxy definitions and the reading table are this repository's judgment. They have not been validated across companies.

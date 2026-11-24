@@ -1,6 +1,5 @@
 ---
 name: interview-question-bank
-status: early
 use: pick questions for each interview in the loop plan
 ---
 

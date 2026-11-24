@@ -1,6 +1,5 @@
 ---
 name: incident-log
-status: early
 use: the scribe fills this in live, one per incident, then the postmortem timeline is built from it
 ---
 

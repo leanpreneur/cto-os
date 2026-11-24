@@ -91,17 +91,11 @@ Each skill bundles its own copy of the playbook it uses, so nothing else is need
 
 ## ADOPT
 
-ADOPT is the author's framework for AI transformation maturity: **A**lign on outcomes, **D**esign an AI-native SDLC, **O**rchestrate human and AI roles, **P**ut guardrails in place, **T**ransform culture and skills. It is described in the essay [From Copilot to Autonomous Engineering](https://abbasraza.com/essays/from-copilot-to-autonomous-engineering/). The assessment in this repo extends the essay with a scoring rubric, a foundations gate built on the seven capabilities in [DORA's AI Capabilities Model](https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model), and an explicit context practice inside D. All three extensions are Early.
+ADOPT is the author's framework for AI transformation maturity: **A**lign on outcomes, **D**esign an AI-native SDLC, **O**rchestrate human and AI roles, **P**ut guardrails in place, **T**ransform culture and skills. It is described in the essay [From Copilot to Autonomous Engineering](https://abbasraza.com/essays/from-copilot-to-autonomous-engineering/). The assessment in this repo extends the essay with a scoring rubric, a foundations gate built on the seven capabilities in [DORA's AI Capabilities Model](https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model), and an explicit context practice inside D. All three extensions are this repository's additions and have not been validated across companies.
 
-## Status labels
+## About the numbers
 
-Every artifact declares a status in its header.
-
-- **Early**: written, not yet applied in a real engagement.
-- **Field-tested**: applied in a real engagement.
-- **Proven**: applied more than once and revised from what was learned.
-
-Today every artifact is Early. As artifacts are applied in real engagements, their labels change and the CHANGELOG says what was learned.
+CTO OS is written from experience leading engineering organizations. Every threshold in a script or playbook, such as a five-hour candidate cap or an eight-item action limit, is a default of this repository and not a standard. Each one says so where it appears. Change them to fit your company, and open an issue when one does not hold up.
 
 ## Next
 
@@ -113,7 +107,7 @@ A CTO scorecard with a 360 question set. The [situations table](docs/situations.
 - [claude-code-templates](https://github.com/davila7/claude-code-templates): includes a cto-advisor reference skill.
 - [claude-skills](https://github.com/alirezarezvani/claude-skills): large library with executive persona skills.
 
-CTO OS differs in three ways: its skills produce finished artifacts instead of advice, it adapts to company stage and measures your own baseline, and each artifact is labeled Early, Field-tested or Proven. See [docs/related-work.md](docs/related-work.md).
+CTO OS differs in three ways: its skills produce finished artifacts instead of advice, it adapts to company stage and measures your own baseline, and every threshold says whether it is a default or a standard. See [docs/related-work.md](docs/related-work.md).
 
 ## About
 

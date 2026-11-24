@@ -163,6 +163,9 @@ class Matching(unittest.TestCase):
         ("Are my spans of control too wide, how many direct reports is too many", "org-shape"),
         ("We need an architecture decision record because the team keeps revisiting a choice", "record-decision"),
         ("I am not sure where to start, what is in this repo", "unsure"),
+        ("We are having an incident and production is down, customers cannot check out", "incident-now"),
+        ("We have no incident process and the same incident keeps coming back, who is incident commander", "incident-process"),
+        ("I need to write a blameless postmortem and measure time to restore", "postmortem"),
     ]
 
     def test_each_phrase_routes_to_its_situation(self):

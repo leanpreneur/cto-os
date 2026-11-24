@@ -1,6 +1,5 @@
 ---
 name: postmortem
-status: early
 use: one per incident that meets a postmortem trigger, published within a week of resolution
 ---
 

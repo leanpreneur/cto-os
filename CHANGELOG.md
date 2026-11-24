@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.8.2 (2026-11-23)
+
+Changed
+- Status labels removed. Playbooks and templates no longer carry a `status:` line, and the README, principle 10 and the related-work page no longer describe the Early, Field-tested and Proven scheme. The caveats stay: every threshold that is this repository's judgment still says it is a default and not a standard, and the Sources section of each playbook says which numbers are that judgment and have not been validated across companies.
+- README: a short "About the numbers" section replaces the status label definitions.
+- Entries below use the old label names.
+
+## v0.8.1 (2026-11-23)
+
+Changed
+- README install steps cover Codex and Gemini CLI as well as Claude Code. Codex and Gemini CLI both read `~/.agents/skills`, so one copy command serves both. The README says the skills have been run in Claude Code and not yet in the other two.
+- The router no longer names a Claude-specific mechanism. It tells Codex users to write `$skill-name` and Gemini CLI users to describe the task so the skill activates.
+
 ## v0.8.0 (2026-11-23)
 
 Added
@@ -13,8 +26,7 @@ Added
 Changed
 - The router's example for a topic CTO OS does not cover is now SOC 2, because incident response is covered. Security and compliance programs are still listed as not covered.
 - The first 90 days and engineering baseline playbooks link to the incident response playbook.
-- README: three rows in the artifact table, the example links, the run line, and the Next list. Install steps now cover Codex and Gemini CLI as well as Claude Code, and say that the skills have been run in Claude Code and not yet in the other two.
-- The router names no tool-specific mechanism. It tells Codex users to write `$skill-name`, and Gemini CLI users to describe the task.
+- README: three rows in the artifact table, the example links, the run line, and the Next list.
 - `scripts/sync-skill-references.sh` bundles the playbook and templates with the new skill.
 
 Tested
